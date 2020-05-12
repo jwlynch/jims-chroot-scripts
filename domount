@@ -7,6 +7,7 @@ vgchange -a y $vg
 
 mount $lvs/root $chroot
 mount $boot $chroot/boot
+mount $efi $chroot/boot/efi
 mount $lvs/usr $chroot/usr
 mount $lvs/var $chroot/var
 mount --bind /sys $chroot/sys

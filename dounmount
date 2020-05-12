@@ -8,6 +8,7 @@ umount $chroot/proc
 umount $chroot/sys
 umount $chroot/var
 umount $chroot/usr
+umount $chroot/boot/efi
 umount $chroot/boot
 umount $chroot
 
