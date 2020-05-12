@@ -1,0 +1,14 @@
+#! /bin/bash -x
+
+source definitions.sh
+
+umount $chroot/dev/pts
+umount $chroot/dev
+umount $chroot/proc
+umount $chroot/sys
+umount $chroot/var
+umount $chroot/usr
+umount $chroot/boot
+umount $chroot
+
+vgchange -a n $vg

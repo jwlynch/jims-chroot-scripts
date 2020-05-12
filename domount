@@ -1,0 +1,16 @@
+#! /bin/bash -x
+
+# this is for determining where everything is
+source definitions.sh
+
+vgchange -a y $vg
+
+mount $lvs/root $chroot
+mount $boot $chroot/boot
+mount $lvs/usr $chroot/usr
+mount $lvs/var $chroot/var
+mount --bind /sys $chroot/sys
+mount --bind /proc $chroot/proc
+mount --bind /dev $chroot/dev
+mount --bind /dev/pts $chroot/dev/pts
+
